@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Esi Ahemah Aidoo – Portfolio</title>
+<meta name="description" content="Portfolio of Esi Ahemah Aidoo, Virtual Assistant and admin & data support professional based in Ghana.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F8FA; --card:#FFFFFF; --ink:#16232F; --muted:#51606E; --line:#DCE3EA;
+  --navy:#1F3A5F; --teal:#2A7F8F; --teal-soft:#E3F1F3; --gold:#E0A030;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1720; --card:#17222D; --ink:#E8EEF3; --muted:#A3B1BE; --line:#2A3846;
+    --navy:#8FB4E0; --teal:#5FC0CF; --teal-soft:#1D3640; --gold:#F0B84E;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1720; --card:#17222D; --ink:#E8EEF3; --muted:#A3B1BE; --line:#2A3846;
+  --navy:#8FB4E0; --teal:#5FC0CF; --teal-soft:#1D3640; --gold:#F0B84E;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',system-ui,sans-serif;font-size:17px;line-height:1.6}
+a{color:var(--teal)} a:hover{color:var(--navy)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header.top{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+header.top .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;padding-top:14px;padding-bottom:14px}
+.brand{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:20px;color:var(--navy);text-decoration:none;letter-spacing:.3px}
+nav a{margin-left:18px;text-decoration:none;color:var(--muted);font-weight:500}
+nav a:hover{color:var(--teal)}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;line-height:1.15;color:var(--navy);margin:0}
+.hero{padding:72px 0 48px}
+.hero .tag{display:inline-block;background:var(--teal-soft);color:var(--teal);font-weight:700;font-size:14px;letter-spacing:1px;padding:6px 14px;border-radius:999px}
+.hero h1{font-size:clamp(36px,6vw,58px);margin:18px 0 14px}
+.hero p{max-width:680px;color:var(--muted);font-size:19px;margin:0}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;min-height:44px}
+.btn.primary{background:var(--navy);color:var(--bg)} .btn.primary:hover{background:var(--teal);color:var(--bg)}
+.btn.ghost{border:2px solid var(--line);color:var(--ink)} .btn.ghost:hover{border-color:var(--teal);color:var(--teal)}
+section{padding:40px 0}
+.section-title{font-size:30px;margin-bottom:8px}
+.lead{color:var(--muted);margin:0 0 28px}
+.case{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px}
+.case-head{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:flex-start}
+.case h3{font-size:28px}
+.pill{font-size:13px;font-weight:700;color:var(--teal);background:var(--teal-soft);padding:4px 12px;border-radius:999px;white-space:nowrap}
+.meta{color:var(--muted);font-size:15px;margin-top:6px}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0}
+.kpi{border:1px solid var(--line);border-radius:14px;padding:16px}
+.kpi b{display:block;font-family:'Bricolage Grotesque',sans-serif;font-size:28px;color:var(--navy)}
+.kpi span{color:var(--muted);font-size:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}
+h4{font-size:18px;margin:26px 0 10px;color:var(--ink)}
+ul.clean{margin:0;padding-left:20px} ul.clean li{margin:4px 0}
+.chart{border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+.chart h5{margin:0 0 4px;font-size:16px;color:var(--ink)}
+.chart .sub{color:var(--muted);font-size:14px;margin:0 0 14px}
+.bar{display:grid;grid-template-columns:120px 1fr 72px;gap:10px;align-items:center;margin:8px 0;font-size:14px}
+.bar .track{background:var(--teal-soft);border-radius:6px;height:16px;overflow:hidden}
+.bar .fill{height:100%;background:var(--teal);border-radius:6px}
+.bar.top .fill{background:var(--navy)}
+.bar .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted)}
+.callout{background:var(--teal-soft);border-radius:14px;padding:18px 20px;margin-top:28px}
+.callout b{color:var(--navy)}
+.tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.tools span{border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:14px;color:var(--muted)}
+.note{font-size:14px;color:var(--muted);margin-top:22px}
+.soon{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.soon div{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px}
+.soon b{display:block;color:var(--ink)} .soon span{color:var(--muted);font-size:14px}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;margin-top:24px}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+footer a{margin-right:16px}
+@media (max-width:760px){
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .grid2,.soon{grid-template-columns:1fr}
+  .case{padding:22px}
+  nav a{margin-left:0;margin-right:16px}
+  .bar{grid-template-columns:96px 1fr 64px}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">Esi Ahemah Aidoo</a>
+    <nav aria-label="Main">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap hero">
+    <span class="tag">VIRTUAL ASSISTANT · ADMIN &amp; DATA SUPPORT</span>
+    <h1>I keep businesses organised,<br>and turn their data into decisions.</h1>
+    <p>I'm Esi, a Ghana-based Virtual Assistant with over 2 years of administrative and operations experience. I help busy founders and small teams with inbox and calendar management, records and reporting, CRM, email marketing and simple automations.</p>
+    <div class="btns">
+      <a class="btn primary" href="#projects">See my work</a>
+      <a class="btn ghost" href="mailto:aidooesi761@gmail.com" target="_blank" rel="noopener">Email me</a>
+    </div>
+  </div>
+
+  <section id="projects">
+    <div class="wrap">
+      <h2 class="section-title">Projects</h2>
+      <p class="lead">Real tasks, done step by step, with the results to show for them.</p>
+
+      <article class="case" aria-labelledby="sika" style="margin-bottom:28px">
+        <div class="case-head">
+          <div>
+            <h3 id="sika">Ad Budget Analysis: Sika Styles Online Store</h3>
+            <p class="meta">9 months of weekly ad results (January–September 2026) · 6 platforms · 10 campaigns</p>
+          </div>
+          <span class="pill">Capstone · Marketing ROI</span>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>GHS 236,575</b><span>Ad spend analysed</span></div>
+          <div class="kpi"><b>4.56x</b><span>Overall return on ad spend</span></div>
+          <div class="kpi"><b>318 → 308</b><span>Rows after cleaning</span></div>
+          <div class="kpi"><b>5.66x</b><span>ROAS in September, up from 3.74x in January</span></div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <h4>The task</h4>
+            <p style="margin:0">Sika Styles, an online fashion store, advertises on Facebook, Instagram, TikTok, Google Ads, X and YouTube. The owner wanted to know which platforms pay back and where to move the ad budget.</p>
+          </div>
+          <div>
+            <h4>How I cleaned the data</h4>
+            <ul class="clean">
+              <li>Removed <b>10 duplicate</b> rows (318 → 308)</li>
+              <li>Put dates written in <b>5 formats</b> into one</li>
+              <li>Standardised platform names (Fb, Insta, YT, GoogleAds → 6 names)</li>
+              <li>Turned money stored as text (GHS, GH₵, ₵) into numbers</li>
+              <li>Fixed <b>5 rows</b> where clicks and impressions were swapped</li>
+              <li>Kept a cleaning log of every change</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4>What the data showed</h4>
+        <div class="grid2">
+          <div class="chart" role="img" aria-label="Return on ad spend by platform: Google Ads 8.68x; TikTok 8.13x; Instagram 3.32x; Facebook 3.05x; YouTube 0.94x; X 0.69x.">
+            <h5>Google Ads and TikTok return over 8x</h5>
+            <p class="sub">Return on ad spend (revenue ÷ ad spend)</p>
+            <div class="bar top"><span>Google Ads</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">8.68x</span></div>
+            <div class="bar top"><span>TikTok</span><div class="track"><div class="fill" style="width:94%"></div></div><span class="val">8.13x</span></div>
+            <div class="bar"><span>Instagram</span><div class="track"><div class="fill" style="width:38%"></div></div><span class="val">3.32x</span></div>
+            <div class="bar"><span>Facebook</span><div class="track"><div class="fill" style="width:35%"></div></div><span class="val">3.05x</span></div>
+            <div class="bar"><span>YouTube</span><div class="track"><div class="fill" style="width:11%;background:var(--gold)"></div></div><span class="val">0.94x</span></div>
+            <div class="bar"><span>X (Twitter)</span><div class="track"><div class="fill" style="width:8%;background:var(--gold)"></div></div><span class="val">0.69x</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Ad cost per order by platform: Google Ads GHS 22; TikTok GHS 23; Facebook GHS 71; Instagram GHS 75; X GHS 326; YouTube GHS 422.">
+            <h5>…and X and YouTube cost the most per order</h5>
+            <p class="sub">Ad cost per order (GHS)</p>
+            <div class="bar"><span>Google Ads</span><div class="track"><div class="fill" style="width:5%"></div></div><span class="val">22</span></div>
+            <div class="bar"><span>TikTok</span><div class="track"><div class="fill" style="width:6%"></div></div><span class="val">23</span></div>
+            <div class="bar"><span>Facebook</span><div class="track"><div class="fill" style="width:17%"></div></div><span class="val">71</span></div>
+            <div class="bar"><span>Instagram</span><div class="track"><div class="fill" style="width:18%"></div></div><span class="val">75</span></div>
+            <div class="bar"><span>X (Twitter)</span><div class="track"><div class="fill" style="width:77%;background:var(--gold)"></div></div><span class="val">326</span></div>
+            <div class="bar"><span>YouTube</span><div class="track"><div class="fill" style="width:100%;background:var(--gold)"></div></div><span class="val">422</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Share of ad budget, with share of revenue: Facebook 34% of budget, 23% of revenue; Instagram 22% and 16%; Google Ads 19% and 37%; TikTok 12% and 22%; YouTube 7% and 1%; X 6% and 1%.">
+            <h5>The budget doesn't follow the returns</h5>
+            <p class="sub">Share of ad budget → share of revenue</p>
+            <div class="bar"><span>Facebook</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">34%→23%</span></div>
+            <div class="bar"><span>Instagram</span><div class="track"><div class="fill" style="width:63%"></div></div><span class="val">22%→16%</span></div>
+            <div class="bar top"><span>Google Ads</span><div class="track"><div class="fill" style="width:56%"></div></div><span class="val">19%→37%</span></div>
+            <div class="bar top"><span>TikTok</span><div class="track"><div class="fill" style="width:36%"></div></div><span class="val">12%→22%</span></div>
+            <div class="bar"><span>YouTube</span><div class="track"><div class="fill" style="width:20%;background:var(--gold)"></div></div><span class="val">7%→1%</span></div>
+            <div class="bar"><span>X (Twitter)</span><div class="track"><div class="fill" style="width:16%;background:var(--gold)"></div></div><span class="val">6%→1%</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Return on ad spend by month: January 3.74x; February 3.89x; March 4.65x; April 4.16x; May 4.12x; June 4.47x; July 4.81x; August 4.92x; September 5.66x.">
+            <h5>Returns improved all year</h5>
+            <p class="sub">Return on ad spend, every other month</p>
+            <div class="bar"><span>January</span><div class="track"><div class="fill" style="width:66%"></div></div><span class="val">3.74x</span></div>
+            <div class="bar"><span>March</span><div class="track"><div class="fill" style="width:82%"></div></div><span class="val">4.65x</span></div>
+            <div class="bar"><span>May</span><div class="track"><div class="fill" style="width:73%"></div></div><span class="val">4.12x</span></div>
+            <div class="bar"><span>July</span><div class="track"><div class="fill" style="width:85%"></div></div><span class="val">4.81x</span></div>
+            <div class="bar top"><span>September</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">5.66x</span></div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>My recommendations to the owner</b>
+          <ul class="clean" style="margin-top:8px">
+            <li><b>Keep X and YouTube switched off.</b> Together they cost about GHS 4,600 a month and returned less than they cost.</li>
+            <li><b>Move that GHS 4,600 a month to TikTok and Google:</b> GHS 2,500 to TikTok Spark Ads (8.55x) and GHS 2,100 to Google Shopping (6.18x).</li>
+            <li><b>Shift GHS 2,000 a month inside Facebook</b> from New Arrivals (1.93x, GHS 103 per order) to Retargeting (6.27x, GHS 38 per order).</li>
+          </ul>
+        </div>
+
+        <h4>Tools I used</h4>
+        <div class="tools"><span>Google Sheets</span><span>Pivot tables</span><span>Looker Studio dashboard</span><span>Data cleaning log</span><span>Presentation deck</span></div>
+        <div class="btns"><a class="btn ghost" href="https://lookerstudio.google.com/reporting/c3291abf-e10b-48df-beed-3afee8ee368d" target="_blank" rel="noopener">View the live dashboard</a></div>
+
+        <p class="note">Week 6 capstone project at Soronko Academy, using a fictional Ghanaian business dataset.</p>
+      </article>
+
+      <article class="case" aria-labelledby="ama">
+        <div class="case-head">
+          <div>
+            <h3 id="ama">Sales Data Analysis: Ama's Fashion Store</h3>
+            <p class="meta">3 months of sales (July–September 2026) · 2 shops in Accra: East Legon and Osu</p>
+          </div>
+          <span class="pill">Data analysis</span>
+        </div>
+
+        <div class="kpis">
+          <div class="kpi"><b>GHS 138,445</b><span>Total revenue</span></div>
+          <div class="kpi"><b>490</b><span>Valid sales after cleaning</span></div>
+          <div class="kpi"><b>1,031</b><span>Items sold</span></div>
+          <div class="kpi"><b>+79%</b><span>Revenue growth, July to September</span></div>
+        </div>
+
+        <div class="grid2">
+          <div>
+            <h4>The task</h4>
+            <p style="margin:0">Ama owns two clothing shops and wanted to know what to buy more of for her next stock order. Her sales sheet had 500 rows, but it was messy and couldn't be trusted as it was.</p>
+          </div>
+          <div>
+            <h4>How I cleaned the data</h4>
+            <ul class="clean">
+              <li>Removed <b>10 duplicate</b> sales (500 → 490 rows)</li>
+              <li>Fixed <b>4 wrong prices</b>, e.g. a GHS 95 shirt typed as 950</li>
+              <li>Standardised spellings ("MoMo" → "Mobile Money", "Top" → "Tops")</li>
+              <li>Put dates written three different ways into one format</li>
+              <li>Flagged <b>9 sales</b> with no payment status for follow-up</li>
+              <li>Kept a cleaning log of every change, so nothing was hidden</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4>What the data showed</h4>
+        <div class="grid2">
+          <div class="chart" role="img" aria-label="Revenue by product: Ankara Dress GHS 41,940; Maxi Dress 28,600; Linen Shirt 26,885; Jeans 25,200; Polo Shirt 9,520; Kente Scarf 6,300.">
+            <h5>Ankara Dress earns the most money</h5>
+            <p class="sub">Revenue by product (GHS)</p>
+            <div class="bar top"><span>Ankara Dress</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">41,940</span></div>
+            <div class="bar"><span>Maxi Dress</span><div class="track"><div class="fill" style="width:68%"></div></div><span class="val">28,600</span></div>
+            <div class="bar"><span>Linen Shirt</span><div class="track"><div class="fill" style="width:64%"></div></div><span class="val">26,885</span></div>
+            <div class="bar"><span>Jeans</span><div class="track"><div class="fill" style="width:60%"></div></div><span class="val">25,200</span></div>
+            <div class="bar"><span>Polo Shirt</span><div class="track"><div class="fill" style="width:23%"></div></div><span class="val">9,520</span></div>
+            <div class="bar"><span>Kente Scarf</span><div class="track"><div class="fill" style="width:15%"></div></div><span class="val">6,300</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Units sold by product: Linen Shirt 283; Ankara Dress 233; Jeans 168; Maxi Dress 130; Polo Shirt 112; Kente Scarf 105.">
+            <h5>…but Linen Shirt sells the most items</h5>
+            <p class="sub">Units sold by product</p>
+            <div class="bar top"><span>Linen Shirt</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">283</span></div>
+            <div class="bar"><span>Ankara Dress</span><div class="track"><div class="fill" style="width:82%"></div></div><span class="val">233</span></div>
+            <div class="bar"><span>Jeans</span><div class="track"><div class="fill" style="width:59%"></div></div><span class="val">168</span></div>
+            <div class="bar"><span>Maxi Dress</span><div class="track"><div class="fill" style="width:46%"></div></div><span class="val">130</span></div>
+            <div class="bar"><span>Polo Shirt</span><div class="track"><div class="fill" style="width:40%"></div></div><span class="val">112</span></div>
+            <div class="bar"><span>Kente Scarf</span><div class="track"><div class="fill" style="width:37%"></div></div><span class="val">105</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Revenue by month: July GHS 31,560; August 50,495; September 56,390.">
+            <h5>Sales grew every month</h5>
+            <p class="sub">Revenue by month (GHS)</p>
+            <div class="bar"><span>July</span><div class="track"><div class="fill" style="width:56%"></div></div><span class="val">31,560</span></div>
+            <div class="bar"><span>August</span><div class="track"><div class="fill" style="width:90%"></div></div><span class="val">50,495</span></div>
+            <div class="bar top"><span>September</span><div class="track"><div class="fill" style="width:100%"></div></div><span class="val">56,390</span></div>
+          </div>
+          <div class="chart" role="img" aria-label="Revenue by payment method: Mobile Money GHS 85,340 (62%); Cash 27,745 (20%); Card 25,360 (18%).">
+            <h5>Most customers pay with Mobile Money</h5>
+            <p class="sub">Share of revenue by payment method</p>
+            <div class="bar top"><span>Mobile Money</span><div class="track"><div class="fill" style="width:62%"></div></div><span class="val">62%</span></div>
+            <div class="bar"><span>Cash</span><div class="track"><div class="fill" style="width:20%"></div></div><span class="val">20%</span></div>
+            <div class="bar"><span>Card</span><div class="track"><div class="fill" style="width:18%"></div></div><span class="val">18%</span></div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <b>My recommendations to Ama</b>
+          <ul class="clean" style="margin-top:8px">
+            <li><b>Stock more Ankara Dresses and Linen Shirts.</b> One brings in the most money, the other sells the most items.</li>
+            <li><b>Collect GHS 8,495 in unpaid or unconfirmed sales</b> before the next order.</li>
+            <li><b>Look into why Osu earns GHS 20,755 less than East Legon</b> before shifting stock between shops.</li>
+            <li><b>Keep Mobile Money fast and reliable</b> at both shops, since it carries 62% of revenue.</li>
+          </ul>
+        </div>
+
+        <h4>Tools I used</h4>
+        <div class="tools"><span>Microsoft Excel</span><span>PivotTables</span><span>Charts &amp; dashboard</span><span>Data cleaning log</span><span>Google Sheets</span></div>
+
+        <p class="note">Training project completed at Soronko Academy using a sample business dataset.</p>
+      </article>
+
+      <h4 style="margin-top:40px">More projects coming soon</h4>
+      <div class="soon">
+        <div><b>Email marketing in Mailchimp</b><span>Sign-up form, landing page, welcome workflow and newsletters</span></div>
+        <div><b>Social media content calendar</b><span>3-week plan in Notion, scheduled in Metricool</span></div>
+        <div><b>Lead generation</b><span>Verified leads, customer profile and outreach messages</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap">
+      <h2 class="section-title">About me</h2>
+      <p class="lead" style="max-width:760px">I hold a BSc in Mathematics from KNUST and have worked in administration and operations in Ghana's petroleum sector, where I built a stock tracking system that cut inventory discrepancies by 15%. I've trained in General Virtual Assistance with Affluence Academy and completed data analysis training with Soronko Academy. I speak English and Twi, work in GMT+0, and can cover UK, European and US hours.</p>
+      <div class="tools"><span>Google Workspace</span><span>Looker Studio</span><span>Microsoft Office</span><span>Trello</span><span>Asana</span><span>Notion</span><span>Airtable</span><span>HubSpot</span><span>Mailchimp</span><span>Metricool</span><span>Buffer</span><span>Calendly</span><span>Zapier</span></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div>
+      <h3 style="font-size:22px">Let's work together</h3>
+      <p style="margin:6px 0 0;color:var(--muted)">Open to freelance, part-time and long-term remote roles.</p>
+      <p style="margin:6px 0 0">Email: <a href="mailto:aidooesi761@gmail.com" target="_blank" rel="noopener">aidooesi761@gmail.com</a></p>
+    </div>
+    <div>
+      <a href="mailto:aidooesi761@gmail.com" target="_blank" rel="noopener">Email</a>
+      <a href="https://www.linkedin.com/in/esi-ahemah-aidoo-621b0b216/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://wa.me/233553036837" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
